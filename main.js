@@ -11,18 +11,17 @@ slider.addEventListener('input', (e) => {
   createSquares(e.target.value);
 });
 
-let setSquareSize = (squares) => {
-  return canvas.clientWidth / squares;
+let setSquareSize = (num) => {
+  return canvas.clientWidth / num;
 };
 
-function createSquares(squares) {
+function createSquares(num) {
   canvas.innerHTML = '';
 
-  let squareSize = setSquareSize(squares);
+  let squareSize = setSquareSize(num);
 
-  for (let i = 0; i < squares ** 2; i++) {
+  for (let i = 0; i < num ** 2; i++) {
     const square = document.createElement('div');
-
     square.style.width = `${squareSize}px`;
     square.style.height = `${squareSize}px`;
 
