@@ -9,7 +9,9 @@ slider.addEventListener('input', (e) => {
 });
 
 canvas.addEventListener('mouseover', (e) => {
-  e.target.style.backgroundColor = 'black';
+  e.target.style.backgroundColor = `hsl(${
+    Math.floor(Math.random() * 359) + 1
+  }, 85%, 50%)`;
 });
 
 function createSquares(squares) {
