@@ -1,7 +1,15 @@
 const canvas = document.querySelector('.etch-a-sketch');
-let squares = 16;
+const slider = document.querySelector('#squaresNumber');
+const squaresValue = document.querySelector('#squaresValue');
+squaresValue.textContent = slider.value;
+
+slider.addEventListener('input', (e) => {
+  squaresValue.textContent = e.target.value;
+  createSquares(e.target.value);
+});
 
 function createSquares(squares) {
+  canvas.innerHTML = '';
   let squareSize = canvas.clientWidth / squares;
   for (let i = 0; i < squares ** 2; i++) {
     const square = document.createElement('div');
@@ -12,5 +20,3 @@ function createSquares(squares) {
     canvas.appendChild(square);
   }
 }
-
-createSquares(squares);

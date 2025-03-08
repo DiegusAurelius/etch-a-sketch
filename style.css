@@ -223,11 +223,11 @@ select {
   border-radius: var(--radius);
 }
 
-input {
+/* input {
   padding: var(--space-2xs);
   background-color: var(--color-white);
   color: var(--color-dark);
-}
+} */
 
 button {
   -webkit-appearance: none;
@@ -291,8 +291,10 @@ body {
 main {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 3em;
 }
 
 footer {
@@ -315,4 +317,14 @@ h1 {
   background-color: var(--color-light);
   display: flex;
   flex-wrap: wrap;
+}
+
+.square {
+  border: 0.5px solid black;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
