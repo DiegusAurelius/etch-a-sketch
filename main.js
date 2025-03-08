@@ -11,16 +11,14 @@ slider.addEventListener('input', (e) => {
   createSquares(e.target.value);
 });
 
-canvas.addEventListener('mouseover', (e) => {
-  e.target.style.backgroundColor = `hsl(${
-    Math.floor(Math.random() * 359) + 1
-  }, 100%, ${(light -= 0.5)}%)`;
-});
+let setSquareSize = (squares) => {
+  return canvas.clientWidth / squares;
+};
 
 function createSquares(squares) {
   canvas.innerHTML = '';
 
-  let squareSize = canvas.clientWidth / squares;
+  let squareSize = setSquareSize(squares);
 
   for (let i = 0; i < squares ** 2; i++) {
     const square = document.createElement('div');
@@ -29,6 +27,12 @@ function createSquares(squares) {
     square.style.height = `${squareSize}px`;
 
     canvas.appendChild(square);
+
+    square.addEventListener('mouseover', (e) => {
+      e.target.style.backgroundColor = `hsl(${
+        Math.floor(Math.random() * 359) + 1
+      }, 100%, ${(light -= 0.5)}%)`;
+    });
   }
 }
 
