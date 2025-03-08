@@ -1,11 +1,15 @@
 const canvas = document.querySelector('.etch-a-sketch');
-const slider = document.querySelector('#squaresNumber');
-const squaresValue = document.querySelector('#squaresValue');
-squaresValue.textContent = slider.value;
+const slider = document.querySelector('#slider');
+const sliderValue = document.querySelector('#sliderValue');
+sliderValue.textContent = slider.value;
 
 slider.addEventListener('input', (e) => {
-  squaresValue.textContent = e.target.value;
+  sliderValue.textContent = e.target.value;
   createSquares(e.target.value);
+});
+
+canvas.addEventListener('mouseover', (e) => {
+  e.target.style.backgroundColor = 'black';
 });
 
 function createSquares(squares) {
@@ -20,3 +24,5 @@ function createSquares(squares) {
     canvas.appendChild(square);
   }
 }
+
+createSquares(slider.value);

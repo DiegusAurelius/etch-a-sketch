@@ -294,7 +294,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3em;
+  gap: 2em;
 }
 
 footer {
@@ -320,11 +320,15 @@ h1 {
 }
 
 .square {
-  border: 0.5px solid black;
+  border: 0.5px solid var(--color-gray);
 }
 
-.slider {
+.sliderWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.sliderWrapper > input {
+  width: 400px;
 }
