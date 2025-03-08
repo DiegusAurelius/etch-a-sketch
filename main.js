@@ -14,12 +14,14 @@ slider.addEventListener('input', (e) => {
 canvas.addEventListener('mouseover', (e) => {
   e.target.style.backgroundColor = `hsl(${
     Math.floor(Math.random() * 359) + 1
-  }, 85%, ${(light -= 0.5)}%)`;
+  }, 100%, ${(light -= 0.5)}%)`;
 });
 
 function createSquares(squares) {
   canvas.innerHTML = '';
+
   let squareSize = canvas.clientWidth / squares;
+
   for (let i = 0; i < squares ** 2; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
