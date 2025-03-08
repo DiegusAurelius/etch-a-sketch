@@ -1,4 +1,4 @@
-const canvas = document.querySelector('.etch-a-sketch');
+const canvas = document.querySelector('.canvas');
 const slider = document.querySelector('#slider');
 const sliderValue = document.querySelector('#sliderValue');
 let light = 100;
@@ -22,7 +22,7 @@ function createSquares(squares) {
 
   for (let i = 0; i < squares ** 2; i++) {
     const square = document.createElement('div');
-    square.classList.add('square');
+
     square.style.width = `${squareSize}px`;
     square.style.height = `${squareSize}px`;
 
