@@ -9,9 +9,9 @@ slider.addEventListener('input', (e) => {
   createSquares(e.target.value);
 });
 
-let setSquareSize = (value) => {
+function setSquareSize(value) {
   return canvas.clientWidth / value;
-};
+}
 
 function createSquares(value) {
   canvas.innerHTML = '';
