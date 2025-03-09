@@ -29,7 +29,7 @@ function createSquares(value) {
 
     square.addEventListener('mouseover', (e) => {
       e.target.style.backgroundColor = `hsl(${
-        Math.floor(Math.random() * 359) + 1
+        Math.floor(Math.random() * 360) + 1
       }, 100%, ${(light -= 10)}%)`;
     });
   }

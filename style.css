@@ -8,7 +8,7 @@
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --step--2: clamp(0.7rem, 0.72rem + -0.03vw, 0.72rem);
   --step-0: clamp(1rem, 1rem + 0vw, 1rem);
-  --step-2: clamp(1.44rem, 1.38rem + 0.1vw, 1.49rem); /* H3 */
+  --step-2: clamp(1.44rem, 1.38rem + 0.1vw, 1.49rem);
 
   --leading-md: 1.6;
 
