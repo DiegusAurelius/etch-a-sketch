@@ -8,7 +8,7 @@
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --step--2: clamp(0.7rem, 0.72rem + -0.03vw, 0.72rem);
   --step-0: clamp(1rem, 1rem + 0vw, 1rem);
-  --step-4: clamp(2.07rem, 1.89rem + 0.37vw, 2.24rem);
+  --step-2: clamp(1.44rem, 1.38rem + 0.1vw, 1.49rem); /* H3 */
 
   --leading-md: 1.6;
 
@@ -50,7 +50,7 @@ body {
 }
 
 h1 {
-  font-size: var(--step-4);
+  font-size: var(--step-2);
   text-align: center;
 }
 
