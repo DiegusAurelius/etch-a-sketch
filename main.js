@@ -1,27 +1,27 @@
 const canvas = document.querySelector('.canvas');
 const slider = document.querySelector('#slider');
-const sliderValue = document.querySelector('#sliderValue');
-let light = 100;
+const sliderValue = document.querySelector('#slider-value');
 
 sliderValue.textContent = slider.value;
 
 slider.addEventListener('input', (e) => {
-  light = 100;
   sliderValue.textContent = e.target.value;
   createSquares(e.target.value);
 });
 
-let setSquareSize = (num) => {
-  return canvas.clientWidth / num;
+let setSquareSize = (value) => {
+  return canvas.clientWidth / value;
 };
 
-function createSquares(num) {
+function createSquares(value) {
   canvas.innerHTML = '';
 
-  let squareSize = setSquareSize(num);
+  let light = 100;
+  let squareSize = setSquareSize(value);
 
-  for (let i = 0; i < num ** 2; i++) {
+  for (let i = 0; i < value ** 2; i++) {
     const square = document.createElement('div');
+
     square.style.width = `${squareSize}px`;
     square.style.height = `${squareSize}px`;
 
